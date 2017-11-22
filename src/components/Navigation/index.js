@@ -15,7 +15,16 @@ export default class Navigation extends Component {
     return (
       <Menu pointing>
         <Menu.Item name="home" active={activeItem === 'home'} onClick={this.handleItemClick} />
-        <Menu.Item name="plants" active={activeItem === 'plants'} onClick={this.handleItemClick} />
+        <Menu.Item
+          name="temperature"
+          active={activeItem === 'temperature'}
+          onClick={this.handleItemClick}
+        />
+        <Menu.Item
+          name="humidity"
+          active={activeItem === 'humidity'}
+          onClick={this.handleItemClick}
+        />
       </Menu>
     );
   }
