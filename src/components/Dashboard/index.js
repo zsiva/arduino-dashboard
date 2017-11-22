@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Table, Container } from 'semantic-ui-react';
-import './style.css';
+import { Grid, Container } from 'semantic-ui-react';
 import CustomLineChart from '../CustomLineChart';
 
-import { tempData, humidityData } from '../../data/lineCharts2.js';
+import { TEMP_PLANT, HUM_PLANT } from '../../data/lineCharts.js';
+import { TEMP_LIMIT, HUM_LIMIT } from '../../constants/charts';
 
 export default class Dashboard extends Component {
   render() {
@@ -14,22 +14,26 @@ export default class Dashboard extends Component {
       <Container className={classnames('About', className)} {...props}>
         <h1>Dashboard</h1>
         <h4>Charts for the year 2017</h4>
-        <div className="halfContainer">
-          <CustomLineChart
-            label="Temperature"
-            data={tempData}
-            domain={{ x: 0, y: 30 }}
-            dangerLimit={10}
-          />
-        </div>
-        <div className="halfContainer">
-          <CustomLineChart
-            label="Humidity"
-            data={humidityData}
-            domain={{ x: 0, y: 30 }}
-            dangerLimit={45}
-          />
-        </div>
+        <Grid columns={2} divided>
+          <Grid.Row>
+            <Grid.Column>
+              <CustomLineChart
+                label="Temperature"
+                data={TEMP_PLANT}
+                domain={{ x: 0, y: 30 }}
+                dangerLimit={TEMP_LIMIT}
+              />
+            </Grid.Column>
+            <Grid.Column>
+              <CustomLineChart
+                label="Humidity"
+                data={HUM_PLANT}
+                domain={{ x: 0, y: 30 }}
+                dangerLimit={HUM_LIMIT}
+              />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </Container>
     );
   }

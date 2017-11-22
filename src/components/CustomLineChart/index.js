@@ -8,21 +8,7 @@ import {
   VictoryBar,
 } from 'victory';
 
-const monthNames = [
-  'Jan',
-  'Feb',
-  'Mar',
-  'Apr',
-  'May',
-  'Jun',
-  'Jul',
-  'Aug',
-  'Sep',
-  'Oct',
-  'Nov',
-  'Dec',
-];
-const tickValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+import { TICK_VALUES, MONTH_NAMES } from '../../constants/charts';
 
 const axisYears = {
   axis: { stroke: 'black', strokeWidth: 1 },
@@ -45,8 +31,8 @@ export default function CustomLineChart(props) {
       <VictoryAxis
         standalone={false}
         style={axisYears}
-        tickValues={tickValues}
-        tickFormat={x => monthNames[x - 1]}
+        tickValues={TICK_VALUES}
+        tickFormat={x => MONTH_NAMES[x - 1]}
       />
       <VictoryAxis
         dependentAxis
