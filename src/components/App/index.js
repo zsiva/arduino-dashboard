@@ -3,7 +3,9 @@ import './style.css';
 
 import Navigation from '../Navigation';
 import Dashboard from '../Dashboard';
-import Plants from '../Plants';
+import TemperatureContainer from '../Temperature';
+
+import { TEMP_PLANT, HUM_PLANT } from '../../data/lineCharts.js';
 
 export default class App extends Component {
   state = { page: 'home' };
@@ -11,13 +13,13 @@ export default class App extends Component {
   handlePages = name => this.setState({ page: name });
 
   render() {
-    console.log('page', this.state.page);
     return (
       <div className="App">
         <div className="App-intro">
           <Navigation handlePages={name => this.handlePages(name)} />
           {this.state.page === 'home' && <Dashboard />}
-          {this.state.page === 'plants' && <Plants />}
+          {this.state.page === 'temperature' && <TemperatureContainer data={TEMP_PLANT} />}
+          {this.state.page === 'humidity' && <TemperatureContainer data={HUM_PLANT} />}
         </div>
       </div>
     );
