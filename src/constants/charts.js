@@ -1,16 +1,16 @@
 export const MONTH_NAMES = [
-  'Jan',
+  'Ene',
   'Feb',
   'Mar',
-  'Apr',
+  'Abr',
   'May',
   'Jun',
   'Jul',
-  'Aug',
+  'Ago',
   'Sep',
   'Oct',
   'Nov',
-  'Dec',
+  'Dic',
 ];
 export const TICK_VALUES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 

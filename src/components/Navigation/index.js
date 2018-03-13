@@ -14,17 +14,17 @@ export default class Navigation extends Component {
 
     return (
       <Menu pointing>
-        <Menu.Item name="home" active={activeItem === 'home'} onClick={this.handleItemClick} />
         <Menu.Item
-          name="temperature"
-          active={activeItem === 'temperature'}
+          name="temperatura"
+          active={activeItem === 'temperatura'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
-          name="humidity"
-          active={activeItem === 'humidity'}
+          name="humedad"
+          active={activeItem === 'humedad'}
           onClick={this.handleItemClick}
         />
+        <Menu.Item name="viento" active={activeItem === 'viento'} onClick={this.handleItemClick} />
       </Menu>
     );
   }
