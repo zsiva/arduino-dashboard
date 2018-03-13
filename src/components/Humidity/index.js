@@ -45,17 +45,15 @@ export default function Humidity(props) {
     <Container className={classnames('plants', className)} textAlign="center">
       <h1>Humedad</h1>
       <Grid celled>
-        <Grid.Row>
-          <Grid.Column width={8}>
-            <CustomChartGroup>
-              <VictoryLine data={HUM_MAX} />
-              <VictoryLine data={HUM_MIN} />
-            </CustomChartGroup>
-          </Grid.Column>
-          <Grid.Column width={8}>
-            <Bar data={bar} width={100} height={50} options={options} />
-          </Grid.Column>
-        </Grid.Row>
+        <Grid.Column mobile={16} tablet={8} computer={8}>
+          <CustomChartGroup>
+            <VictoryLine data={HUM_MAX} />
+            <VictoryLine data={HUM_MIN} />
+          </CustomChartGroup>
+        </Grid.Column>
+        <Grid.Column mobile={16} tablet={8} computer={8}>
+          <Bar data={bar} options={options} />
+        </Grid.Column>
       </Grid>
     </Container>
   );

@@ -64,22 +64,20 @@ export default function TemperatureContainer(props) {
     <Container textAlign="center">
       <h1>Temperatura</h1>
       <Grid celled>
-        <Grid.Row>
-          <Grid.Column width={8}>
-            <CustomChartGroup>
-              <VictoryLine data={TEMP_MAX} />
-              <VictoryLine data={TEMP_MIN} />
-            </CustomChartGroup>
-          </Grid.Column>
-          <Grid.Column width={8}>
-            <CustomLineChart
-              label="Temperatura"
-              data={TEMP_MAX}
-              domain={{ x: 0, y: 30 }}
-              dangerLimit={TEMP_LIMIT}
-            />
-          </Grid.Column>
-        </Grid.Row>
+        <Grid.Column mobile={16} tablet={8} computer={8}>
+          <CustomChartGroup>
+            <VictoryLine data={TEMP_MAX} />
+            <VictoryLine data={TEMP_MIN} />
+          </CustomChartGroup>
+        </Grid.Column>
+        <Grid.Column mobile={16} tablet={8} computer={8}>
+          <CustomLineChart
+            label="Temperatura"
+            data={TEMP_MAX}
+            domain={{ x: 0, y: 30 }}
+            dangerLimit={TEMP_LIMIT}
+          />
+        </Grid.Column>
       </Grid>
     </Container>
   );
