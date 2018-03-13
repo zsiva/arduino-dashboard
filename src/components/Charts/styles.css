@@ -1,0 +1,127 @@
+.trafficlight {
+  background: #000;
+  width: 100px;
+  height: 270px;
+  border-radius: 10px;
+  position: relative;
+  border: solid 5px #333;
+  float: left;
+}
+
+.pedestrian {
+  height: 200px;
+  width: 100px;
+}
+
+.light {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  background-size: 5px 5px;
+  left: 10px;
+}
+.lightSmall {
+  width: 70px;
+  height: 70px;
+}
+.light .icon {
+  margin-top: 20px;
+}
+.red {
+  background: red;
+  background-image: radial-gradient(brown, transparent);
+  top: 10px;
+  animation: 13s red infinite;
+}
+
+.yellow {
+  background: yellow;
+  background-image: radial-gradient(orange, transparent);
+  top: 90px;
+  animation: 13s yellow infinite;
+  box-shadow: 0 0 20px #111 inset, 0 0 10px yellow;
+}
+
+.green {
+  background: green;
+  background-image: radial-gradient(lime, transparent);
+  top: 180px;
+  box-shadow: 0 0 20px #111 inset, 0 0 10px lime;
+  animation: 13s green infinite;
+}
+
+@keyframes red {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.1;
+  }
+  80% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes yellow {
+  0% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0.1;
+  }
+  80% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes green {
+  0% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.1;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
