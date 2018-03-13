@@ -6,6 +6,7 @@ import Dashboard from '../Dashboard';
 import TemperatureContainer from '../Temperature';
 import Humidity from '../Humidity';
 import Wind from '../Wind';
+import Map from '../Map';
 
 import { TEMP_PLANT, HUM_PLANT } from '../../data/lineCharts.js';
 
@@ -23,6 +24,7 @@ export default class App extends Component {
           {this.state.page === 'temperatura' && <TemperatureContainer data={TEMP_PLANT} />}
           {this.state.page === 'humedad' && <Humidity />}
           {this.state.page === 'viento' && <Wind />}
+          {this.state.page === 'mapa' && <Map />}
         </div>
       </div>
     );

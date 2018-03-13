@@ -25,6 +25,7 @@ export default class Navigation extends Component {
           onClick={this.handleItemClick}
         />
         <Menu.Item name="viento" active={activeItem === 'viento'} onClick={this.handleItemClick} />
+        <Menu.Item name="mapa" active={activeItem === 'map'} onClick={this.handleItemClick} />
       </Menu>
     );
   }
