@@ -3,12 +3,10 @@ import './style.css';
 
 import Navigation from '../Navigation';
 import Dashboard from '../Dashboard';
-import TemperatureContainer from '../Temperature';
+import Temperature from '../Temperature';
 import Humidity from '../Humidity';
 import Wind from '../Wind';
 import Map from '../Map';
-
-import { TEMP_PLANT, HUM_PLANT } from '../../data/lineCharts.js';
 
 export default class App extends Component {
   state = { page: 'temperatura' };
@@ -21,7 +19,7 @@ export default class App extends Component {
         <div className="app-intro">
           <Navigation handlePages={name => this.handlePages(name)} />
           {this.state.page === 'home' && <Dashboard />}
-          {this.state.page === 'temperatura' && <TemperatureContainer data={TEMP_PLANT} />}
+          {this.state.page === 'temperatura' && <Temperature />}
           {this.state.page === 'humedad' && <Humidity />}
           {this.state.page === 'viento' && <Wind />}
           {this.state.page === 'mapa' && <Map />}

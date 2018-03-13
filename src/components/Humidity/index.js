@@ -1,11 +1,11 @@
 import React from 'react';
 import classnames from 'classnames';
 import { Grid, Container } from 'semantic-ui-react';
-import { VictoryBar, VictoryLine } from 'victory';
+import { VictoryLine } from 'victory';
 import { HUM_MAX, HUM_MIN } from '../../data/humidity.js';
 import CustomChartGroup from '../CustomChartGroup';
 import { Bar } from 'react-chartjs-2';
-import { TEMP_LIMIT, MONTH_NAMES } from '../../constants/charts';
+import { MONTH_NAMES } from '../../constants/charts';
 
 const options = {
   title: {

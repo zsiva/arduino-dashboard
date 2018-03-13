@@ -24,7 +24,7 @@ export default class Map extends Component {
         mapTypeId: 'terrain',
       });
 
-      var flightPlanCoordinates = [
+      var tripCoordinates = [
         { lat: 39.95266776827336, lng: 0.015106568066357795 },
         { lat: 39.91554894091755, lng: 0.027809509960889045 },
         { lat: 39.85970119023183, lng: 0.026779541699170295 },
@@ -33,8 +33,8 @@ export default class Map extends Component {
         { lat: 39.52524895302371, lng: -0.3021236565430172 },
         { lat: 39.4351517879037, lng: -0.3124233391602047 },
       ];
-      var flightPath = new window.google.maps.Polyline({
-        path: flightPlanCoordinates,
+      var tripPath = new window.google.maps.Polyline({
+        path: tripCoordinates,
         geodesic: true,
         strokeColor: '#FF0000',
         strokeOpacity: 1.0,
@@ -51,7 +51,7 @@ export default class Map extends Component {
         ],
       });
 
-      flightPath.setMap(map);
+      tripPath.setMap(map);
     }
   }
   render() {

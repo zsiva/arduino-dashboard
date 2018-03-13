@@ -1,13 +1,11 @@
 import React from 'react';
-import classnames from 'classnames';
-import { Grid, Container } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
 import { Radar } from 'react-chartjs-2';
-import { TEMP_LIMIT, MONTH_NAMES } from '../../constants/charts';
 
 const options = {
   title: {
     display: true,
-    text: 'Viento 2017',
+    text: 'Velocidad 2017',
   },
   maintainAspectRatio: false,
 };
@@ -48,12 +46,10 @@ const radar = {
   ],
 };
 
-export default function Wind(props) {
-  const { className } = props;
+export default function Wind() {
   return (
-    <Container className={classnames('plants', className)} textAlign="center">
+    <Container textAlign="center">
       <h1>Viento</h1>
-
       <Radar data={radar} options={options} />
     </Container>
   );
